@@ -1,0 +1,18 @@
+provider "aws" {
+  region  = "us-east-1"
+  profile = "default"
+}
+
+resource "aws_instance" "web_server" {
+    ami = "ami-0279c3b3186e54acd"
+    instance_type = "t2.micro"
+#    subnet_id = var.public_subnet[1]
+ #   key_name = "demo"
+ #   security_groups = [var.security_groups]
+
+   
+    
+    tags = {
+        Name = "web_server"
+    }
+}
