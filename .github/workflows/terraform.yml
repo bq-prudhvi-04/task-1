@@ -23,3 +23,7 @@ jobs:
           tf_actions_subcommand: "init" 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      # Generates an execution plan for Terraform
+      - name: Terraform Plan
+        run: terraform plan    
