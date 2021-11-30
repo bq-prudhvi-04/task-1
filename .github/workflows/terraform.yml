@@ -54,7 +54,7 @@ jobs:
         run: terraform plan  
         
       - name: Terraform apply
-        run : terrafom apply --auto-approve
+        run : terraform apply --auto-approve
         
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
